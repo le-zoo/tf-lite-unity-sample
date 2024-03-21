@@ -1,8 +1,8 @@
-﻿
-using System.Linq;
+﻿using System.Linq;
+using TensorFlowLite;
 using UnityEngine;
 
-namespace TensorFlowLite
+namespace Assets.Samples.DeepLab
 {
     public class DeepLab : BaseImagePredictor<float>
     {

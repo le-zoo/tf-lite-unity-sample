@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Samples.Bert;
 using UnityEngine;
 using UnityEditor;
 using NUnit.Framework;

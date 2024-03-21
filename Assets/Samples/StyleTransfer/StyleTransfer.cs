@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using TensorFlowLite;
+using UnityEngine;
 
-namespace TensorFlowLite
+namespace Assets.Samples.StyleTransfer
 {
     public class StyleTransfer : BaseImagePredictor<float>
     {

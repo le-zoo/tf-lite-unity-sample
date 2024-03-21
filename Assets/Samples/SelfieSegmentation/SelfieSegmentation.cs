@@ -1,7 +1,8 @@
 ﻿
+using TensorFlowLite;
 using UnityEngine;
 
-namespace TensorFlowLite
+namespace Assets.Samples.SelfieSegmentation
 {
 
     public sealed class SelfieSegmentation : BaseImagePredictor<float>

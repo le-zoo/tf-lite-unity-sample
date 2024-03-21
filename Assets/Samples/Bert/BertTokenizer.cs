@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 
-
-namespace TensorFlowLite
+namespace Assets.Samples.Bert
 {
     // See
     // https://unicode.org/reports/tr44/#General_Category_Values

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using TensorFlowLite;
 
-namespace TensorFlowLite
+namespace Assets.Samples.TextClassification
 {
 
     public class TextClassification : IDisposable

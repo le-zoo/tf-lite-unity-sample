@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-namespace TensorFlowLite
+namespace Assets.Samples.Common
 {
     [RequireComponent(typeof(Button))]
     public class GoToSceneButton : MonoBehaviour

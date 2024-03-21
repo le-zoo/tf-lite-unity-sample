@@ -1,44 +1,46 @@
-﻿using TensorFlowLite;
-using TextureSource;
+﻿using TextureSource;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(VirtualTextureSource))]
-public class DeepLabSample : MonoBehaviour
+namespace Assets.Samples.DeepLab
 {
-    [SerializeField]
-    private RawImage cameraView = null;
-
-    [SerializeField]
-    private RawImage outputView = null;
-
-    [SerializeField]
-    private DeepLab.Options options = default;
-
-    private DeepLab deepLab;
-
-    private void Start()
+    [RequireComponent(typeof(VirtualTextureSource))]
+    public class DeepLabSample : MonoBehaviour
     {
-        deepLab = new DeepLab(options);
-        if (TryGetComponent(out VirtualTextureSource source))
+        [SerializeField]
+        private RawImage cameraView = null;
+
+        [SerializeField]
+        private RawImage outputView = null;
+
+        [SerializeField]
+        private DeepLab.Options options = default;
+
+        private DeepLab deepLab;
+
+        private void Start()
         {
-            source.OnTexture.AddListener(OnTextureUpdate);
+            deepLab = new DeepLab(options);
+            if (TryGetComponent(out VirtualTextureSource source))
+            {
+                source.OnTexture.AddListener(OnTextureUpdate);
+            }
         }
-    }
 
-    private void OnDestroy()
-    {
-        if (TryGetComponent(out VirtualTextureSource source))
+        private void OnDestroy()
         {
-            source.OnTexture.RemoveListener(OnTextureUpdate);
+            if (TryGetComponent(out VirtualTextureSource source))
+            {
+                source.OnTexture.RemoveListener(OnTextureUpdate);
+            }
+            deepLab?.Dispose();
         }
-        deepLab?.Dispose();
-    }
 
-    private void OnTextureUpdate(Texture texture)
-    {
-        deepLab.Invoke(texture);
-        cameraView.material = deepLab.transformMat;
-        outputView.texture = deepLab.GetResultTexture();
+        private void OnTextureUpdate(Texture texture)
+        {
+            deepLab.Invoke(texture);
+            cameraView.material = deepLab.transformMat;
+            outputView.texture = deepLab.GetResultTexture();
+        }
     }
 }

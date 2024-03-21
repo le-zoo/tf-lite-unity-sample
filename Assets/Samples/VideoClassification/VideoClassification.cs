@@ -1,10 +1,11 @@
-namespace TensorFlowLite
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using TensorFlowLite;
+using UnityEngine;
 
+namespace Assets.Samples.VideoClassification
+{
     /// <summary>
     /// MoViNets: Video Classification example from TensorFlow
     /// https://www.tensorflow.org/lite/examples/video_classification/overview

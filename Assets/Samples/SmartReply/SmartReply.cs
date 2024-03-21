@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using TensorFlowLite;
 
-namespace TensorFlowLite
+namespace Assets.Samples.SmartReply
 {
 
     public class SmartReply : IDisposable

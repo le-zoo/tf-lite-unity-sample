@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using TensorFlowLite;
+using UnityEngine;
 
-namespace TensorFlowLite
+namespace Assets.Samples.SSD
 {
     /// <summary>
     /// Object Detection

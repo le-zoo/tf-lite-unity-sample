@@ -20,7 +20,7 @@
 
 using UnityEngine;
 
-namespace TensorFlowLite
+namespace Assets.Samples.FaceMesh
 {
     public static class FaceMeshBuilder
     {
